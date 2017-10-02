@@ -26,3 +26,9 @@ let reverseApply x f =
     f x
 
 printfn "%A" (reverseApply lst split)
+
+let func1 (n : int) =
+    oneToN
+
+let func2 (f) : int =
+    f 19 [10; 2; 3; 10; 11; 10]
