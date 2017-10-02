@@ -14,3 +14,10 @@ let multiplicity (x:int) (xs:int list) : int =
     n
 
 printfn "%A" (multiplicity 19 [10; 2; 3; 10; 11; 10])
+
+let split (xs:int list) : (int list * int list) =
+    let x1 = List.init (xs.Length / 2 + xs.Length % 2) (fun x -> xs.[x * 2])
+    let x2 = List.init (xs.Length / 2) (fun x -> xs.[x * 2 + 1])
+    (x1, x2)
+
+printfn "%A" (split (oneToN 10))
