@@ -21,3 +21,8 @@ let split (xs:int list) : (int list * int list) =
     (x1, x2)
 
 printfn "%A" (split (oneToN 10))
+
+let reverseApply x f =
+    f x
+
+printfn "%A" (reverseApply lst split)
