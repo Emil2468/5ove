@@ -37,3 +37,20 @@ let evens (lst : int list) : int list =
     List.filter (fun x -> x % 2 = 0) lst
 
 printfn "%A" (evens lst)
+
+let add2 x =
+  x + 2
+
+let sub2 x =
+  x - 2
+
+
+let applyList (lst : ('a -> 'b) list) (n : 'a) : 'b list =
+  List.map (reverseApply n) lst
+
+printfn "%A" (applyList [sub2; add2] 18)
+
+let ssort (xs : int list) : int list =
+  Set.toList (Set.ofList xs)
+
+printfn "%A" (ssort [4; 3; 2; 6; 1; 8; 2])
