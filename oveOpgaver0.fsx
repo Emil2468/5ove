@@ -37,3 +37,12 @@ let evens (lst : int list) : int list =
     List.filter (fun x -> x % 2 = 0) lst
 
 printfn "%A" (evens lst)
+
+//FUnktion der tager i mod en liste af funktioner på ét tal og returnerer en
+//liste med alle resultaterne. Skal bruge List.map og reverseApply.
+(*let applyList (f : ('a list)) (n : 'a) =
+    reverseApply (List.map n f)*)
+
+let ssort xs : int list : int list =
+    xs = Set.toList (Set.ofList xs)
+    xs
