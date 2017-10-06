@@ -75,3 +75,8 @@ let reverseArray (arr : 'a[]) : 'a[] =
     Array.init (arr.Length) (fun i -> arr.[arr.Length - (i + 1)])
 
 printfn "reverseArray [|1..5|] = %A" (reverseArray [|1..5|])
+
+(*printfn "\n5.11"
+let reverseArrayD (arr : 'a[]) : unit =
+    let mutable i = arr.Length - 1
+    while i > 0*)
