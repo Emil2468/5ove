@@ -63,3 +63,15 @@ let ssort (xs : int list) : int list =
   Set.toList (Set.ofList xs)
 
 printfn "%A\n" (ssort [4; 3; 2; 6; 1; 8; 2])
+
+printfn "5.9"
+let squares (n : int) : int [] =
+    Array.init n (fun i -> (i + 1) * (i + 1))
+
+printfn "squares 10 = %A" (squares 10)
+
+printfn "\n5.10"
+let reverseArray (arr : 'a[]) : 'a[] =
+    Array.init (arr.Length) (fun i -> arr.[arr.Length - (i + 1)])
+
+printfn "reverseArray [|1..5|] = %A" (reverseArray [|1..5|])
